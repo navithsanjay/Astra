@@ -1,0 +1,14 @@
+*{
+    background-color: black;
+    color: white;
+}
+
+
+.accordion-item{
+    background-color: rgb(7, 29, 29) ;
+}
+
+.accordion-header{
+    background-color: black;
+}
+
