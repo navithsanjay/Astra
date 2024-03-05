@@ -8,6 +8,7 @@ import   astra from './assets/Astra final Logo nobg.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom'
 
 
 AOS.init();
@@ -32,7 +33,7 @@ const Home = () => {
         <i  data-bs-dismiss="offcanvas" aria-label="Close" class="fa-solid fa-xmark close-btn offclose"></i>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item " data-bs-dismiss="offcanvas">
             <a class="nav-link " aria-current="page" href="#">Home</a>
           </li>
@@ -53,41 +54,55 @@ const Home = () => {
 
 
 <div class='cars'>
-<h2 className='text-center rob cl pt-2'  id="explore">Explore Our Cars</h2>
-  <img src={car} id="car-photo"></img>
+<h2 className='text-center rob  pt-2'  id="explore">Explore Our Cars</h2>
+  <img className='img-fluid' src="https://pngimg.com/d/tesla_car_PNG13.png" width={1000} id="car-photo"></img>
+</div>
+
+<div class="start-button w40 bg5">
+     <div className='wrapper'>
+      <a href="#explores">Start</a>
+
+     </div>
 </div>
 
 
 
+<div className="explore container p-5" id='explores' >
 
+<h2 className='text-center rob cl2 pt-3'  id="explore">Explore Our Teams</h2>
+<div   class=" flex  ">
+   
+  <div className='flex'>
 
-<div className="explore container" >
-<div   class=" row">
-    <h2 className='text-center rob cl pt-3'  id="explore">Explore Our Teams</h2>
-  <div class="col-md-6">
-    <div class="card">
-      <div class="team-hover">
+   <Link to='/astra'> <div class="cardbox " data-aos="fade-right" data-aos-duration="1000">
+      
         <img src={astra}  class="card-img-top" alt="..."/>
-      </div>
-      <div class="card-body" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+     
+      <div class="card-overlay ">
         <h5 class="card-title pop">Team Astra</h5>
         <p class="card-text"> Solar Kart Racing Team: Powering Innovation, Racing towards Sustainability </p>
       </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="card">
-      <div class="team-hover">
-        <img src={Brainiacs}  class="card-img-top" alt="..."/>
-      </div>
+    </div></Link>
+  </div> 
+
+
+
+
+  
+   <Link to="/brainiacs"> <div class="cardbox" data-aos="fade-left" data-aos-duration="1000">
+ 
+        <img src={Brainiacs}  class="card-img-top p-5" alt="..."/>
       
-      <div class="card-body" data-aos="fade-down" data-aos-easing="linear"     data-aos-duration="500">
+      <div class="card-overlay">
        <div className='wrap'></div>
         <h5 class="card-title pop">Team Brainiacs</h5>
         <p class="card-text">Brainiacs - Ekart Racing  : Fueling Passion, Driving Excellence </p>
       </div>
-    </div>
-  </div>
+
+    </div> </Link>
+
+  
+  
 </div>
 
 
@@ -97,13 +112,13 @@ const Home = () => {
   <div className='container-fluid journey' id="background">
 
     
-  <h2 className='text-center rob cl pt-3'>Our Journey</h2>
+  <h2 className='text-center rob cl2 pt-3'>Our Journey</h2>
   <div className="container p-5">
   <div className="row text-center">
            <div className="col-md-3">
-           <i class="fa-solid fa-trophy"></i>
+           <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                 <h3><CountUp end={100} enableScrollSpy scrollSpyDelay={100}/>+</h3>
-                <p>Championship Wins</p>
+                <p>Students</p>
            </div>
            <div className="col-md-3">
            <i class="fa-solid fa-car"></i>
@@ -117,9 +132,9 @@ const Home = () => {
                 <p>Awards Won</p>
            </div>
            <div className="col-md-3">
-           <i class="fa-solid fa-lightbulb"></i>
-           <h3><CountUp end={40} enableScrollSpy scrollSpyDelay={100}/>+</h3>
-                <p>Innovation Awards</p>
+           <i class="fa-solid fa-handshake"></i>
+           <h3><CountUp end={12} enableScrollSpy scrollSpyDelay={100}/>+</h3>
+                <p>Sponsorship</p>
            </div>
          </div>
       </div>
@@ -154,3 +169,4 @@ const Home = () => {
 }
 
 export default Home
+
